@@ -2,7 +2,7 @@
 
 ## Machine learning API for automated detection of fake news with Django Rest Framework 
 
-This sample project is a post-phase of applying Machine learning algorithms for detection of fake news. The Machine learning process involves data scraping from three different sources, data wrangling, data preparation, applying logistic regresion model for training our data sets and evaluation in a separate repo of have to do with users been able to create posts and also add comments. This project employ about 26000 data samples. The fakeness level takes categorical values of zeros and ones. 0 for real news 1 for fake news.
+This sample project is a post-phase of applying Machine learning algorithms for detection of fake news. The Machine learning process involves data scraping from three different sources(NYT, Guardian, Kaggle), data wrangling, data preparation, applying logistic regresion model for training our data sets and evaluation; All in a separate repo. This project employ about 26000 data samples. The fakeness level takes categorical values of zeros and ones. 0 for real news 1 for fake news.
 
 
 ## Dependencies
