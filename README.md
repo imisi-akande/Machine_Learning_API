@@ -1,5 +1,4 @@
-# Machine_Learning_API# Machine_Learning_API
-
+# Machine_Learning_API
 
 ## Machine learning API for automated detection of fake news with Django Rest Framework 
 
