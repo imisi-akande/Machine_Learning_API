@@ -68,4 +68,16 @@ To setup and run the sample code you need to clone the repo
  *  **URL Params** 
  **Required:**
  `id=[IntField]`
+
+
+ *  **URL Params** 
+ **Required:**
+ `headline=[StringField]`
+ `body=[TextField]`
+ `id=[IntField]`
+
+ * **URL**
+ <_The User will be able to filter out a particular news with a keyword and its fakeness status e.g searching through all Attorney General Loretta news that are fake_> 
+ 
+ <_/api/news/$q=''$search=1)_>    -     http://127.0.0.1:8000/api/news/?offset=20&q=Attorney+General+Loretta&search=1
         
