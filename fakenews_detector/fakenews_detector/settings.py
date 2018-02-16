@@ -25,7 +25,10 @@ SECRET_KEY = 'wdd8l$*yeyibl2k2nl=3yd*e#x94x72(7v(v)=7rryeq0@wi70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '92a9b4fc.ngrok.io',
+    'localhost'
+]
 
 
 # Application definition
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'fakenews_detector.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +77,11 @@ TEMPLATES = [
         },
     },
 ]
+
+
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'frontend/dist')
+
+print('BASE_DIR', TEMPLATE_PATH)
 
 WSGI_APPLICATION = 'fakenews_detector.wsgi.application'
 
@@ -131,3 +139,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/dist/static'),
+]

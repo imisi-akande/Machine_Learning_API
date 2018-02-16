@@ -27,3 +27,15 @@ class DetectorDetail(generics.RetrieveAPIView):
     queryset = models.News.objects.all()
     serializer_class = serializers.DetectorSerializer
 
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+def index(request):
+    """
+      Get the view for the home page
+      :param request: The request object
+      :return: Returns the default homepage view
+    """
+    context = RequestContext(request)
+    context_dict = {}
+    return render_to_response('index.html', context_dict, context)
