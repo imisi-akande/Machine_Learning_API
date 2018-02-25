@@ -118,7 +118,7 @@
              </p>
 
               <button
-                v-if="currentNews.fakeness===0"
+                v-if="news.fakeness===0"
                   class="w3-button w3-block w3-indigo w3-hover-indigo"
                   >Real News
                </button>
@@ -324,7 +324,9 @@ export default {
           } else {
             this.message = 'No news was found, type another keyword or try again later';
           }
+          /* eslint-disable no-console */
           this.newsBoard = result.data.results;
+          console.log(this.newsBoard, result.data.results);
           this.nextUrl = result.data.next;
           this.previousUrl = result.data.previous;
         })
