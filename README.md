@@ -22,10 +22,14 @@ To setup and run the sample code you need to clone the repo
 3. Install Python Requirements:
 
         pip install -r requirements.txt
-        
+4. Build the frontend client
+    * move into the frontend directory
+    * install the dependencies: npm install
+    * run: npm run build
+
 4. For the server run :
 
-        python manage.py runserver        
+        python manage.py runserver     
         
 ## Routes
 

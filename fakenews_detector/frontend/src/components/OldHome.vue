@@ -132,8 +132,7 @@ export default {
     searchNews(event) {
       event.preventDefault();
       const searchText = this.searchPhrase;
-      this.message = 'Investaging this news snippet';
-      /* eslint-disable no-console */
+      this.message = 'Investigating this news snippet';
       /* eslint-disable quote-props */
       axios.get(`/api/news/?q=${searchText}&limit=9&offset=0`)
         .then((result) => {
@@ -141,7 +140,6 @@ export default {
           this.newsBoard = result.data.results;
           this.nextUrl = result.data.next;
           this.previousUrl = result.data.previous;
-          console.log('result', result);
         })
         .catch(() => {
           this.message = 'An error occurred, Please try again or contact us';
@@ -154,9 +152,7 @@ export default {
       const apiurl = url.toString();
       const indexofAPi = apiurl.toString().indexOf('api');
       const searchUrl = `/${apiurl.substring(indexofAPi, apiurl.length)}`;
-      console.log('searchUrl', searchUrl);
       this.message = 'Fetching news .....';
-      /* eslint-disable no-console */
       /* eslint-disable quote-props */
       /* eslint-disable func-names */
       axios.get(searchUrl)
@@ -165,7 +161,6 @@ export default {
           this.newsBoard = result.data.results;
           this.nextUrl = result.data.next;
           this.previousUrl = result.data.previous;
-          console.log('result', result);
         })
         .catch(() => {
           this.message = 'An error occurred, Please try again or contact us';
@@ -173,7 +168,6 @@ export default {
     },
   },
   mounted() {
-    console.log(';;;;;;', this.$route.params);
     if (this.$route.params.type) {
       const searchValue = (this.$route.params.type === 'fake') ? 1 : 0;
       this.getNews(`/api/news/?limit=9&offset=0&search=${searchValue}`);
